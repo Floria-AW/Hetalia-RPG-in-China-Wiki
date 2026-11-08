@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2.HEAD - Heta Anthropic Reincarnation - Hetalia RPG in China Wiki</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-top">
+        <h1>3.ECHO</h1>
+        <button class="menu-btn" aria-label="常看">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <!-- 基本信息卡片 -->
+      <section class="card">
+        <div class="cover">
+          <img src="assets/images/ECHO_cover.png" alt="Heta Anthropic Reincarnation ECHO Cover Picture">
+        </div>
+        <p><strong>Game:</strong> <a href="anthropic.html">Heta Anthropic Reincarnation (黑塔人类纪行)</a></p>
+        <p><strong>Ending Track:</strong> ???</p>
+        <p><strong>Previous:</strong> <a href="HEAD.html">2.HEAD</a></p>
+        <p><em>3.ECHO</em> is the fourth chapter in <em>Heta Anthropic Reincarnation (黑塔人类纪行)</em>.</p>
+      </section>
+
+      <!-- 导航目录 -->
+      <section class="card">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#plot">Plot</a></li>
+        </ul>
+      </section>
+
+      <!-- 剧情 -->
+      <section id="plot" class="card">
+        <h2>Plot</h2>
+        <p></p>
+      </section>
+
+      <footer>
+        <p><a href="list.html">&larr; Back to Game List</a></p>
+      </footer>
+    </div>
+
+    <!-- 侧边栏（常看）与遮罩 -->
+    <aside>
+      <h2>常看</h2>
+        <dl>
+          <dt>黑塔人类纪行</dt>
+          <dd><a href="heta_anthropic_reincarnation.html" target="_blank"><img src="assets/images/Heta_Anthropic_Reincarnation_黑塔人类纪行.png" width="100"></a></dd>
+        </dl>
+    </aside>
+    <div class="overlay"></div>
+
+    <script>
+    (function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const aside = document.querySelector('aside');
+    const overlay = document.querySelector('.overlay');
+    if (!menuBtn || !aside || !overlay) return;
+
+    const setMenu = (open) => {
+    aside.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    };
+
+    menuBtn.addEventListener('click', () => {
+    setMenu(!aside.classList.contains('open'));
+    });
+    overlay.addEventListener('click', () => setMenu(false));
+    })();
+    </script>
+  </body>
+</html>

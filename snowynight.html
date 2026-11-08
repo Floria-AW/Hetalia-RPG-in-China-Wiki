@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snowy Night - Hetalia RPG in China Wiki</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-top">
+        <h1>Snowy Night (雪夜雪夜)</h1>
+        <button class="menu-btn" aria-label="常看">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <!-- 基本信息卡片 -->
+      <section class="card">
+        <div class="cover">
+          <img src="assets/images/Snowy_Night_Cover_Picture.png" alt="Snowy Night Cover Picture">
+        </div>
+        <p><strong>Creator:</strong> Strawberry Offal & Tomato Soup Studio (草莓内脏番茄汤工作室)</p>
+        <p><strong>Engine:</strong> RPG Maker MV</p>
+        <p><strong>Genre:</strong> Romance, training, guide, galgame, visual novel</p>
+        <p><strong>Status:</strong> Finished</p>
+        <p><strong>Latest Update:</strong> 1 September 2023</p>
+        <p><em>Snowy Night (雪夜雪夜)</em> is a Chinese language RPG created by Strawberry Offal & Tomato Soup Studio based on the Japanese comics <em>Hetalia: World★Stars</em>.</p>
+      </section>
+
+      <!-- 导航目录 -->
+      <section class="card">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#warnings">Game Warnings</a></li>
+          <li><a href="#summary">Game Summary</a></li>
+          <li><a href="#settings">Special Setting</a></li>
+          <li><a href="#characters">Characters</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+        </ul>
+      </section>
+
+      <!-- 游戏警告 -->
+      <section id="warnings" class="card">
+        <h2>Game Warnings</h2>
+        <ul>
+          <li>Fan-made Character Settings</li>
+          <li>USSR</li>
+          <li>Sibling Romance</li>
+          <li>Major Character Death</li>
+        </ul>
+      </section>
+
+      <!-- 游戏摘要 -->
+      <section id="summary" class="card">
+        <h2>Game Summary</h2>
+        <p>Ivan transferred to a school in Moscow, so he temporarily lodged at Ilya's place.</p>
+      </section>
+
+      <!-- 特殊设定 -->
+      <section id="settings" class="card">
+        <h2>Special Setting</h2>
+        <p>The game uses "Rubles" as its in-game currency, but the exchange rate is not the same as real-world Rubles.</p>
+      </section>
+
+      <!-- 角色介绍 -->
+      <section id="characters" class="card">
+        <h2>Characters</h2>
+        <p>
+        <dl>
+          <dd>·&nbsp;&nbsp;<strong>Stepan Braginsky:</strong> Does not appear directly; older brother of Ilya and Ivan; arranged for Ivan to go to Moscow and takes care of his daily life.</dd>
+          <dd>·&nbsp;&nbsp;<strong>Ilya Braginsky:</strong> Player-controlled character; has three classes to choose from; appears fierce.</dd>
+          <dd>·&nbsp;&nbsp;<strong>Ivan Braginsky</strong></dd>
+          <dd>·&nbsp;&nbsp;<strong>Elena Braginskikaya</strong></dd>
+          <dd>·&nbsp;&nbsp;<strong>Anna Braginskikaya</strong></dd>
+          <dd>·&nbsp;&nbsp;<strong>Alexei</strong></dd>
+          <dd>·&nbsp;&nbsp;<strong>Victor</strong></dd>
+        </dl>
+        </p>
+      </section>
+
+      <!-- 画廊区域 -->
+      <section id="gallery" class="card">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="" alt="">
+            <p></p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p><a href="list.html">&larr; Back to Game List</a></p>
+      </footer>
+    </div>
+
+    <!-- 侧边栏（常看）与遮罩 -->
+    <aside>
+      <h2>常看</h2>
+      <dl>
+        <dt>黑塔人类纪行</dt>
+        <dd><a href="anthropic.html" target="_blank"><img src="assets/images/Heta_Anthropic_Reincarnation_黑塔人类纪行.png" width="100"></a></dd>
+      </dl>
+    </aside>
+    <div class="overlay"></div>
+
+    <script>
+    (function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const aside = document.querySelector('aside');
+    const overlay = document.querySelector('.overlay');
+    if (!menuBtn || !aside || !overlay) return;
+
+    const setMenu = (open) => {
+    aside.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    };
+
+    menuBtn.addEventListener('click', () => {
+    setMenu(!aside.classList.contains('open'));
+    });
+    overlay.addEventListener('click', () => setMenu(false));
+    })();
+    </script>
+  </body>
+</html>

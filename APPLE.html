@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0.APPLE - Heta Anthropic Reincarnation - Hetalia RPG in China Wiki</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <header class="header-top">
+        <h1>0.APPLE</h1>
+        <button class="menu-btn" aria-label="常看">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <!-- 基本信息卡片 -->
+      <section class="card">
+        <div class="cover">
+        <img src="assets/images/APPLE_cover.png" alt="Heta Anthropic Reincarnation APPLE Cover Picture">
+        </div>
+        <p><strong>Game:</strong> <a href="anthropic.html">Heta Anthropic Reincarnation (黑塔人类纪行)</a></p>
+        <p><strong>Ending Track:</strong> APPLE</p>
+        <p><strong>Next:</strong> <a href="WISHES.html">1.WISHES</a></p>
+        <p><em>0.APPLE</em> is the first chapter in <em>Heta Anthropic Reincarnation (黑塔人类纪行)</em>.</p>
+      </section>
+
+      <!-- 导航目录 -->
+      <section class="card">
+        <h3>Contents</h3>
+        <ul>
+          <li><a href="#plot">Plot</a></li>
+        </ul>
+      </section>
+
+      <!-- 剧情 -->
+      <section id="plot" class="card">
+        <h2>Plot</h2>
+        <p>Warning: the following contains spoilers. Click [Expand] on the right to read.</p>
+        <details>
+          <summary>[Expand]</summary>
+          <p>China, Russia, England, France, Germany, Japan and Italy were invited by America to come to a villa in the forest. After a wonderful vacation, before everyone left, America proposed a game called "Killer VS Smiler". In the game, the "Killer" with a knife carving on has to choose someone to "execute" until they successfully execute the "Smiler", while the "Smiler" with a smile carving has to wait for the "Killer's" execution. The others whose wooden sticks have no pictures have nothing to do. France asked if the "Smiler" and others had any ways to go against the "Killer" and got a negative answer.</p>
+          <p>The order in which the countries drew their sticks is: China, Russia, England, Germany, France, Italy and Japan. The last, extra wooden stick was kept by America. During the draw, France and Italy exchanged wooden sticks.</p>
+          <p>England draws the "Killer". After all of the players went back to their room, the judge, America, goes to England's room and asked who he would decide to "execute". England guesses all the players but gets a negative answer. America claims that he just realized the last stick he collected was the one with a smile carving. He gives an apple to England as the winner's prize. England decides to leave. America sees him out but stops a distance away from the villa. England asked if America would go back with him, and America replies that he still has some things to do.</p>
+        </details>
+      </section>
+
+      <footer>
+        <p><a href="list.html">&larr; Back to Game List</a></p>
+      </footer>
+    </div>
+
+    <!-- 侧边栏（常看）与遮罩 -->
+    <aside>
+      <h2>常看</h2>
+        <dl>
+          <dt>黑塔人类纪行</dt>
+          <dd><a href="heta_anthropic_reincarnation.html" target="_blank"><img src="assets/images/Heta_Anthropic_Reincarnation_黑塔人类纪行.png" width="100"></a></dd>
+        </dl>
+    </aside>
+    <div class="overlay"></div>
+
+    <script>
+    (function () {
+    const menuBtn = document.querySelector('.menu-btn');
+    const aside = document.querySelector('aside');
+    const overlay = document.querySelector('.overlay');
+    if (!menuBtn || !aside || !overlay) return;
+
+    const setMenu = (open) => {
+    aside.classList.toggle('open', open);
+    overlay.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    };
+
+    menuBtn.addEventListener('click', () => {
+    setMenu(!aside.classList.contains('open'));
+    });
+    overlay.addEventListener('click', () => setMenu(false));
+    })();
+    </script>
+  </body>
+</html>

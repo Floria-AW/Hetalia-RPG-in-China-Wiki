@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List - Hetalia RPG in China Wiki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header-top">
+            <h1>List</h1>
+            <button class="menu-btn" aria-label="常看" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <section class="card">
+            <h2>RPG Game Live</h2>
+            <ul>
+                <li>APH大逃殺</li>
+                <li>彼世將傾</li>
+                <li>不明所以的aph狼人殺</li>
+                <li>For once</li>
+                <li>Snowy Dream</li>
+                <li>黑塔籠</li>
+                <li>黑塔憶</li>
+                <li>黑塔祭典</li>
+                <li>黑塔度假村</li>
+                <li><a href="runaway.html">Heta Runaway Express(黑塔逃亡列车)</a></li>
+                <li>黑塔學院怪談</li>
+                <li>黑塔異常研究所</li>
+                <li>Hero</li>
+                <li><a href="windsprit.html">Heta: Windsprit Shore(黑塔风精灵海岸)</a></li>
+                <li><a href="anthropic.html">Heta Anthropic Reincarnation(黑塔人类纪行)</a></li>
+                <li>Hetalia: The Testing World (黑塔守護前傳)</li>
+                <li>Heta Guard (黑塔守護)</li>
+                <li><a href="space.html">Hetalia: A Space Odyssey(黑塔漫游记)</a></li>
+                <li><a href="fairytale.html">World Fairytale(黑塔童话世纪)</a></li>
+                <li>Supercalifragilisticexpialidocious(胡搞的RPG)</li>
+                <li>灰塔病棟</li>
+                <li>禁止房間</li>
+                <li>迷影馬戲團</li>
+                <li>暮色黑塔</li>
+                <li>色彩利亞ColorfulWorld</li>
+                <li>Skone</li>
+                <li>Under Your Skin(肉物语)</li>
+                <li>無人知曉</li>
+                <li>雪途利亞</li>
+                <li>血緣黑塔</li>
+                <li>Eden of Hetalia(伊甸黑塔)</li>
+                <li>意识黑塔</li>
+                <li>Time Eater (黑塔時蝕者)</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Downloadable Games</h2>
+            <ul>
+                <li><a href="snowynight.html">Snowy Night(雪夜雪夜)</a></li>
+                <li>Snowy Night 2(雪夜雪夜2)</li>
+            </ul>
+        </section>
+
+        <footer>
+            <p><a href="index.html">&larr; Back to Home</a></p>
+        </footer>
+    </div>
+
+    <!-- 侧边栏（常看）与遮罩 -->
+    <aside>
+        <h2>常看</h2>
+        <dl>
+            <dt>黑塔人类纪行</dt>
+            <dd>
+                <a href="anthropic.html" target="_blank">
+                    <img src="assets/images/Heta_Anthropic_Reincarnation_黑塔人类纪行.png"
+                         alt="Heta Anthropic Reincarnation 黑塔人类纪行"
+                         width="100">
+                </a>
+            </dd>
+        </dl>
+    </aside>
+    <div class="overlay"></div>
+
+    <script>
+        (function () {
+            const menuBtn = document.querySelector('.menu-btn');
+            const aside = document.querySelector('aside');
+            const overlay = document.querySelector('.overlay');
+            if (!menuBtn || !aside || !overlay) return;
+
+            const setMenu = (open) => {
+                aside.classList.toggle('open', open);
+                overlay.classList.toggle('open', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+            };
+
+            menuBtn.addEventListener('click', () => {
+                setMenu(!aside.classList.contains('open'));
+            });
+            overlay.addEventListener('click', () => setMenu(false));
+        })();
+    </script>
+</body>
+</html>
