@@ -7,7 +7,14 @@
 </head>
 <body>
     <div class="container">
+      <div class="header-top">
         <h1>Home</h1>
+        <button class="menu-btn" aria-label="常看" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+      </div>
         <section class="card">
             <h2>About</h2>
             <p>Click <a href="list.html">here</a> to get the whole list.</p>
@@ -33,5 +40,41 @@
                 </div>
             </div>
     </section>
+
+    <!-- 侧边栏（常看）与遮罩 -->
+    <aside>
+        <h2>常看</h2>
+        <dl>
+            <dt>黑塔人类纪行</dt>
+            <dd>
+                <a href="anthropic.html" target="_blank">
+                    <img src="assets/images/Heta_Anthropic_Reincarnation_黑塔人类纪行.png"
+                         alt="Heta Anthropic Reincarnation 黑塔人类纪行"
+                         width="100">
+                </a>
+            </dd>
+        </dl>
+    </aside>
+    <div class="overlay"></div>
+
+    <script>
+        (function () {
+            const menuBtn = document.querySelector('.menu-btn');
+            const aside = document.querySelector('aside');
+            const overlay = document.querySelector('.overlay');
+            if (!menuBtn || !aside || !overlay) return;
+
+            const setMenu = (open) => {
+                aside.classList.toggle('open', open);
+                overlay.classList.toggle('open', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+            };
+
+            menuBtn.addEventListener('click', () => {
+                setMenu(!aside.classList.contains('open'));
+            });
+            overlay.addEventListener('click', () => setMenu(false));
+        })();
+    </script>
 </body>
 </html>
